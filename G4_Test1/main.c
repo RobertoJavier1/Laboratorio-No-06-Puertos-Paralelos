@@ -77,53 +77,53 @@ int main() {
         //si el boton esta presionado, se enciende el led correspondiente
         //IDR input data register, ODR output data register
         //lee IDR y si el bit correspondiente al pin del boton es 1, enciende el led correspondiente, sino lo apaga
-        // if(GPIOB -> IDR & MASK(Pin_Boton1)){
-        //     GPIOA -> ODR |= MASK(Pin_LED1);
-        // } else {
-        //     GPIOA -> ODR &= ~MASK(Pin_LED1);
-        // }
+        if(GPIOB -> IDR & MASK(Pin_Boton1)){
+            GPIOA -> ODR |= MASK(Pin_LED1);
+        } else {
+            GPIOA -> ODR &= ~MASK(Pin_LED1);
+        }
 
-        // //boton 2
-        // if(GPIOB->IDR & MASK(Pin_Boton2)){
-        //     GPIOA -> ODR |= MASK(Pin_LED2);
-        // }else {
-        //     GPIOA -> ODR &= ~MASK(Pin_LED2);
-        // }
+        //boton 2
+        if(GPIOB->IDR & MASK(Pin_Boton2)){
+            GPIOA -> ODR |= MASK(Pin_LED2);
+        }else {
+            GPIOA -> ODR &= ~MASK(Pin_LED2);
+        }
 
-        // //boton 3
-        // if(GPIOB->IDR & MASK(Pin_Boton3)){
-        //     GPIOA -> ODR |= MASK(Pin_LED3);
-        // }else {
-        //     GPIOA -> ODR &= ~MASK(Pin_LED3);
-        // }
+        //boton 3
+        if(GPIOB->IDR & MASK(Pin_Boton3)){
+            GPIOA -> ODR |= MASK(Pin_LED3);
+        }else {
+            GPIOA -> ODR &= ~MASK(Pin_LED3);
+        }
 
-        // //boton 4
-        // if(GPIOB->IDR & MASK(Pin_Boton4)){
-        //     GPIOA -> ODR |= MASK(Pin_LED4);
-        // }else {
-        //     GPIOA -> ODR &= ~MASK(Pin_LED4);
-        // }
+        //boton 4
+        if(GPIOB->IDR & MASK(Pin_Boton4)){
+            GPIOA -> ODR |= MASK(Pin_LED4);
+        }else {
+            GPIOA -> ODR &= ~MASK(Pin_LED4);
+        }
 
-        // //boton 5
-        // if(GPIOA->IDR & MASK(Pin_Boton5)){
-        //     GPIOA -> ODR |= MASK(Pin_LED5);
-        // }else {
-        //     GPIOA -> ODR &= ~MASK(Pin_LED5);
-        // }
+        //boton 5
+        if(GPIOA->IDR & MASK(Pin_Boton5)){
+            GPIOA -> ODR |= MASK(Pin_LED5);
+        }else {
+            GPIOA -> ODR &= ~MASK(Pin_LED5);
+        }
 
         
-        GPIOA->ODR &= ~(MASK(Pin_LED1) | MASK(Pin_LED2) | MASK(Pin_LED3) | MASK(Pin_LED4) | MASK(Pin_LED5));
+        // GPIOA->ODR &= ~(MASK(Pin_LED1) | MASK(Pin_LED2) | MASK(Pin_LED3) | MASK(Pin_LED4) | MASK(Pin_LED5));
 
-        if (GPIOB->IDR & MASK(Pin_Boton1))
-            GPIOA->ODR |= MASK(Pin_LED1);
-        else if (GPIOB->IDR & MASK(Pin_Boton2))
-            GPIOA->ODR |= MASK(Pin_LED2);
-        else if (GPIOB->IDR & MASK(Pin_Boton3))
-            GPIOA->ODR |= MASK(Pin_LED3);
-        else if (GPIOB->IDR & MASK(Pin_Boton4))
-            GPIOA->ODR |= MASK(Pin_LED4);
-        else if (GPIOA->IDR & MASK(Pin_Boton5))
-            GPIOA->ODR |= MASK(Pin_LED5);
+        // if (GPIOB->IDR & MASK(Pin_Boton1))
+        //     GPIOA->ODR |= MASK(Pin_LED1);
+        // else if (GPIOB->IDR & MASK(Pin_Boton2))
+        //     GPIOA->ODR |= MASK(Pin_LED2);
+        // else if (GPIOB->IDR & MASK(Pin_Boton3))
+        //     GPIOA->ODR |= MASK(Pin_LED3);
+        // else if (GPIOB->IDR & MASK(Pin_Boton4))
+        //     GPIOA->ODR |= MASK(Pin_LED4);
+        // else if (GPIOA->IDR & MASK(Pin_Boton5))
+        //     GPIOA->ODR |= MASK(Pin_LED5);
         
 
     }
